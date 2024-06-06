@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tabela em HTML</title>
+</head>
+
+<body>
+  <main>
+    <h1>Tabela no HTML</h1>
+
+    <section id="students">
+      <h2>Tabela de Alunos</h2>
+
+      <table border="2px"> <!--cria uma tabela-->
+        <thead>
+          <tr> <!--table row - cria uma linha-->
+            <th>Nome</th> <!--(table header) cria uma célula no cabeçalho da tabela-->
+            <th>Email</th>
+            <th>Matrícula</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Carol Danvers</td> <!--(table data) uasada para definir o conteúdo da célula-->
+            <td>carol.danvers@email.com</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Peter Parker</td>
+            <td>peter.parker@email.com</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Toni Stark</td>
+            <td>toni.stark@gmail.com</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="finance">
+      <h2>Tabela de Controle Financeiro</h2>
+
+      <table border="2px">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td rowspan="2">15/06/2022</td>
+            <td>Despesa</td>
+            <td>Almoço</td>
+            <td>R$ 35,00</td>
+          </tr>
+          <tr>
+            <td>Receita</td>
+            <td>Salário</td>
+            <td>R$ 3.768,00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="store">
+      <h2>Tabela de Lojas</h2>
+
+      <table border="2px">
+        <caption>Produzidos x Vendidos por Loja</caption> <!--descrição da tabela-->
+
+        <colgroup> <!--agrupa as colunas-->
+          <col>
+          <col span="2" style="background-color: red;">
+          <col span="2" style="background-color: blue;">
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th rowspan="2"></th> <!--vai ocupar duas linhas-->
+            <th colspan="2" scope="colgroup">Loja 1</th> <!--vai ocupar 2 colunas-->
+            <th colspan="2" scope="colgroup">Loja 2</th><!--vai ocupar 2 colunas-->
+          </tr>
+          <tr>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">Vassouras</th> <!--o nome de produto também é cabeçalho-->
+            <td>50</td> <!--loja 1-->
+            <td>30</td> <!--loja 1-->
+            <td>20</td> <!--loja 2-->
+            <td>20</td> <!--loja 2-->
+          </tr>
+          <tr>
+            <th scope="row">Baldes</th> <!--o nome de produto também é cabeçalho-->
+            <td>10</td> <!--loja 1-->
+            <td>10</td> <!--loja 1-->
+            <td>30</td> <!--loja 2-->
+            <td>25</td> <!--loja 2-->
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+
+</html>
